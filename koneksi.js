@@ -1,0 +1,17 @@
+var mysql = require('mysql');
+
+//.Koneksi database
+
+const conn = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'934500Jingg@ku',
+    database:'world'
+});
+
+conn.connect((err) =>{
+    if(err) throw err;
+    console.log('Mysql konek');
+});
+
+module.exports=conn;  //export fungsi untuk diimport di file lain
