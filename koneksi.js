@@ -1,12 +1,11 @@
 var mysql = require('mysql');
 
 //.Koneksi database
-
 const conn = mysql.createConnection({
-    host:'localhost',
+    host:'192.168.1.25',
     user:'root',
-    password:'934500Jingg@ku',
-    database:'world'
+    password:'root!td_d3v_999',
+    database:'daq'
 });
 
 conn.connect((err) =>{
