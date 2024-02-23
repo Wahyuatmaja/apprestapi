@@ -1,5 +1,7 @@
 'use strict';
 
+const { json } = require('body-parser');
+
 module.exports = function(app) {
     var jsonku = require('./controller');
 
@@ -11,4 +13,10 @@ module.exports = function(app) {
 
     app.route('/tampil/:id')
         .get(jsonku.tampildatasuhuperdevmindex)
+
+    app.route('/tambah')
+        .post(jsonku.tambahdatauser);
+
+    app.route('/ubah')
+        .put(jsonku.updatedatausers);
 }
