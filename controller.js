@@ -17,3 +17,17 @@ exports.tampilsemuadatasuhu = function(req,res){
         }
     });
 };
+
+//Menampilkan data suhu berdasarkan DevmIndex
+exports.tampildatasuhuperdevmindex=function(req,res){
+    let id =req.params.id; 
+    connection.query('SELECT * FROM DeviceMaster WHERE DevmIndex = ?', [id], function(error, rows, fields){
+        if(error) {
+            connection.log(error);
+        } else {
+            response.ok(rows, res);
+        }
+    });
+};
+
+//Tambah Data Suhu
