@@ -2,9 +2,9 @@ var mysql = require('mysql');
 
 //.Koneksi database
 const conn = mysql.createConnection({
-    host:'192.168.1.25',
+    host:'localhost',
     user:'root',
-    password:'root!td_d3v_999',
+    password:'123localhost',
     database:'fullstack_js'
 });
 
